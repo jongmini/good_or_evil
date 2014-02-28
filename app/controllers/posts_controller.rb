@@ -28,7 +28,8 @@ class PostsController < ApplicationController
 
     if post.photo.file.nil?
       BlankWorker.perform_async(post.id)
-      redirect_to root_path
+
+      redirect_to posts_path
     else
       ImageWorker.perform_async(post.id)
       current_user.posts << post # adding posts to current_user
@@ -48,7 +49,6 @@ class PostsController < ApplicationController
     current_user.comments << @comment  # adding comments to current_user
     post = Post.find(comment_params["post_id"])
     respond_to do |f|
-      # f.html
       f.json { render :json => @comment, only: [:id, :body, :post_id]}
     end
 
