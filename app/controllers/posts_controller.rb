@@ -3,7 +3,7 @@ class PostsController < ApplicationController
   before_action :authenticate_user!
 
   def index
-    @posts = Post.order(:created_at).page params[:page]
+    @posts = Post.order(:created_at).reverse_order.page params[:page]
 
     gon.posts = @posts.map do |post|
       {id: post.id,
@@ -32,7 +32,8 @@ class PostsController < ApplicationController
     else
       ImageWorker.perform_async(post.id)
       current_user.posts << post # adding posts to current_user
-      redirect_to root_path
+      redirect_to posts_path
+
     end
   end
 
