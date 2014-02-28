@@ -307,9 +307,9 @@ div.signup_partial {
 	}
 
 	/* overiding masonary col4 img width*/
-	.col4 img {
+	/*.col4 img {
 			max-width: 430px;
-		}
+		}*/
 
 	.col4 {
 		width: 450px;

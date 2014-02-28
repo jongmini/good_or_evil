@@ -1,13 +1,11 @@
 class SiteController < ApplicationController
       
   def index
-
-    if current_user.nil?
-      redirect_to root_path
-    else
-      redirect_to posts_path
-    end
-    
+    # if current_user.nil?
+    #   redirect_to root_path
+    # else
+    #   redirect_to posts_path
+    # end
   end
 
   def show

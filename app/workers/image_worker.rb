@@ -7,11 +7,11 @@ class ImageWorker
 
     image_caption = "caption:#{post.text_overlay}"
     image_for_caption = Magick::Image.read(image_caption) {
-      self.size = "360x480"
+      self.size = "400x300"
       self.gravity = Magick::CenterGravity
       self.stroke = '#000000'
       self.fill = '#ffffff'
-      self.pointsize = 24
+      self.pointsize = 44
       self.font = "Arial"
 
       self.background_color= "Transparent"
