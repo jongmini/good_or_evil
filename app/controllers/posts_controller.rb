@@ -28,11 +28,13 @@ class PostsController < ApplicationController
 
     if post.photo.file.nil?
       BlankWorker.perform_async(post.id)
+
       redirect_to posts_path
     else
       ImageWorker.perform_async(post.id)
       current_user.posts << post # adding posts to current_user
       redirect_to posts_path
+
     end
   end
 

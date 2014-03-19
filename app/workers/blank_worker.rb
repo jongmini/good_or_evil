@@ -10,6 +10,7 @@ class BlankWorker
     dir = File.dirname("#{Rails.root}/public/uploads/post/photo/#{post.id}/#{rmagick_bg_name}.jpg")
     FileUtils.mkdir_p(dir) unless File.directory?(dir)
 
+
     str = "caption:#{post.text_overlay}"
     img = Magick::Image.read(str) {
       self.size = "360x480"
