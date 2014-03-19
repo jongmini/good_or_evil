@@ -1,17 +1,10 @@
-/*** These are not needed */
-/*	html {
-		width:100%;
-		height:100%;
-		overflow-y:scroll;
-	}
-*/
 	body {
 		position:relative;
 		width:100%;
 		height:100%;
 		padding:0;
 		margin:0;
-		font-family:"Trebuchet MS","Arial", Helvetica, sans-serif;
+		font-family: "Arial", Helvetica, sans-serif;
 		font-weight:normal;
 		font-style:normal;
 		line-height:1;
@@ -24,16 +17,109 @@
 	/* POSTS CONTAINER */
 
 	div.post_container {
-		/*background: url(/images/13.jpg);*/
-		background-color: rgba(189, 195, 199,1.0);
 		width: 100%;
 	}
 	
-	.item { 
-		margin-top: 5em;
+.post_header { 
+	width: 100%;
+	height: 45em;
+	margin-top: 0em;
+	background-size: cover; 
+	color: white;	
+}
+
+.post_title {
+	color: white;
+	top: -1em;
+	left: 10px;
+	position: fixed;
+	z-index: 9;
+}
+
+.post_title span {
+	color: black;
+	opacity: .8
+}
+
+img#bg {
+	opacity: .6;
+}
+
+#bg {
+ position: fixed; 
+ top: 0; 
+ left: 0;
+ background: cover;
+  }
+.bgwidth { width: 100%; }
+.bgheight { height: 100%; }
 
 
-	}
+.item {
+	width: 100%;
+	position: relative;
+	z-index: 9;
+	top: -37em;
+	left: 10%;
+}
+
+
+
+.post_page_link {
+	width: 100px;
+	height: 40px;
+	top: 10em;
+	left: 0;
+	padding: 10px 5px 5px 5px;
+	font-size: 1.25em;
+	background-color: #999;
+	opacity: .8;
+	list-style-type: none;
+	text-align: center;
+	position: fixed;
+}
+
+.post_page_link:hover {
+	left: .15em;
+}
+
+
+.profile_post_link {
+	width: 100px;
+	height: 40px;
+	top: 12em;
+	left: 0;
+	padding: 10px 5px 5px 5px;
+	font-size: 1.25em;
+	background-color: #999;
+	opacity: .8;
+	list-style-type: none;
+	text-align: center;
+	position: fixed;
+}
+
+.profile_post_link:hover {
+	left: .15em;
+}
+
+.signout_link {
+	width: 100px;
+	height: 40px;
+	top: 14em;
+	left: 0;
+	padding: 10px 5px 5px 5px;
+	font-size: 1.25em;
+	background-color: #999;
+	opacity: .8;
+	list-style-type: none;
+	text-align: center;
+	position: fixed;	
+}
+
+.signout_link:hover {
+	left: .15em;
+}
+
 
 	div.profile_container {
 		background: url(/images/13.jpg) center no-repeat;
@@ -41,7 +127,6 @@
 		background-size: 100%;
 		width: 100%;
 		height: 100%;
-
 	}
 
 	
@@ -60,7 +145,7 @@
 
 	
 	
-/**** IMPORTANT THESE ARE NEEDED ****/	
+
 	#container {
 		float: none;
 		width: 100%;
@@ -69,15 +154,10 @@
 	  padding: 0;
 	 
 		margin: 0 auto;
-	  /* optional */
+
 	  -webkit-border-radius: 5px;
 	  -moz-border-radius: 5px;
-	  border-radius: 5px;
-	  /* content-box is NEEDED. if border-box is enabled
-	     then it when Masonry calculates the height and width
-		 of the container it counts incorrectly and the result
-		 images running to the edge of the container on the right
-		 and bottom sides. Only apply content-box to the container. */
+	  
 	  -webkit-box-sizing:content-box;
 	  -moz-box-sizing:content-box;
 	  box-sizing:content-box;
@@ -100,41 +180,6 @@
 		margin: 0;
 	}
 	
-	/* unfortunately masonry needs hard pxs for images */
-	.col1 { width: 80px; }
-	.col2 { width: 180px; }
-	.col3 { width: 280px; }
-	.col4 { width: 450px; }
-	.col5 { width: 480px; }
-	.col1 img { max-width: 80px; }
-	.col2 img { max-width: 180px; }
-	.col3 img { max-width: 280px; }
-	.col4 img { max-width: 450px; }
-	.col5 img { max-width: 480px; }
-	
-	/* animations for the transition/reordering */
-	.transitions-enabled.masonry,
-	.transitions-enabled.masonry .masonry-brick {
-	  -webkit-transition-duration: 0.7s;
-	  -moz-transition-duration: 0.7s;
-	  -ms-transition-duration: 0.7s;
-	  -o-transition-duration: 0.7s;
-	  transition-duration: 0.7s;
-	}
-	.transitions-enabled.masonry {
-	  -webkit-transition-property: height, width;
-	  -moz-transition-property: height, width;
-	  -ms-transition-property: height, width;
-	  -o-transition-property: height, width;
-	  transition-property: height, width;
-	}
-	.transitions-enabled.masonry  .masonry-brick {
-	  -webkit-transition-property: left, right, top;
-	  -moz-transition-property: left, right, top;
-	  -ms-transition-property: left, right, top;
-	  -o-transition-property: left, right, top;
-	  transition-property: left, right, top;
-	}
 
 
 
@@ -162,6 +207,7 @@
 	width: 100px;
 	height: 35px;
 	padding: 5px;
+	left: -2em;
 /*	margin-right: -10em;*/
 	font-size: 1.5em;
 	background-color: #333;
@@ -202,7 +248,7 @@ div.signup_partial {
 	width: 200px;
 	height: 60px;
 	margin-top: 25px;
-	margin-left: 150px;
+	left: 10px;
 	padding-top: 15px;
 	color: #ffffff;
 	font-size: 1.75;
@@ -239,11 +285,14 @@ div.signup_partial {
 	#good_btn {
 		float: left;
 		z-index: 10;
+		color: white;
+		border: 1px solid white;
 	}
 
 	#evil_btn {
 		float: right;
 		z-index: 10;
+		border: 1px solid white;
 	}
 
 	#good_btn:hover{
@@ -253,6 +302,7 @@ div.signup_partial {
 
 	#evil_btn:hover{
 		background-color: #000;
+		border: 1px solid black;
 		color: #FFF;
 	}
 
@@ -315,34 +365,36 @@ div.signup_partial {
 		}
 
 	.canvasjs-chart-canvas {
-		height: 100px;
-		width: 445px;
-		/*padding-bottom: 10px;*/
-		margin: -50px -10px -10px -10px;
+		height: 450px;
+		width: 450px;
+		padding-top: -200px;
+		margin: -225px -10px -10px -10px;
 		z-index: 0;
+	}
+
+	.canvasjs-chart-container {
+		/*margin-top: -225px;*/
 	}
 
 	.good_evil {
 			padding: 10px 0;
 		}
 
-	.good_evil_comment {
-		padding: 5px 0;
-	}
+.good_evil_comment {
+	padding: 5px 0;
+}
 
-	form {
-    padding-top: 50px;
-    }
+form {
+  padding-top: 50px;
+  }
 
-  .comment {
-   	/*padding: 10px;*/
-   	float: left;
-   	width: 430px;
-   }
+.comment {
+ 	/*padding: 10px;*/
+ 	float: left;
+ 	width: 430px;
+ }
 
-   .button {
-  border-style: solid;
-  /*border-width: 1px;*/
+.button { 
   cursor: pointer;
   font-family: inherit;
   font-weight: bold;
@@ -357,7 +409,91 @@ div.signup_partial {
   padding-bottom: 0.8125em;
   padding-left: 1.5em;
   font-size: 1em;
-  background-color: #7f8c8d;
-  border-color: #7f8c8d;
-  color: #333333; }
+  background-color: transparent;
+  color: #333; 
 
+}
+
+
+
+/* PROFILE PAGE */
+
+
+
+  #all_votes_all_posts_chart {
+  	top: 250px;
+  
+	}
+
+	#your_votes_all_posts_chart {
+		position: absolute;
+		top: 250px;
+		margin-left: 400px;
+	}
+
+	#all_votes_your_posts_chart {
+		position: absolute;
+		top: 250px;
+		margin-left: 800px;
+	}
+
+	#user_chart {
+		left: 8%;
+		height: 400px;
+	}
+
+
+.post_page_link {
+	width: 100px;
+	height: 40px;
+	top: 10em;
+	left: 0;
+	padding: 10px 5px 5px 5px;
+	font-size: 1.25em;
+	background-color: #999;
+	opacity: .8;
+	list-style-type: none;
+	text-align: center;
+	position: fixed;
+}
+
+.post_page_link:hover {
+	left: .15em;
+}
+
+
+.page_link {
+	width: 100px;
+	height: 40px;
+	top: 12em;
+	left: 0;
+	padding: 10px 5px 5px 5px;
+	font-size: 1.25em;
+	background-color: #999;
+	opacity: .8;
+	list-style-type: none;
+	text-align: center;
+	position: fixed;
+}
+
+.page_link:hover {
+	left: .15em;
+}
+
+.signout_link {
+	width: 100px;
+	height: 40px;
+	top: 14em;
+	left: 0;
+	padding: 10px 5px 5px 5px;
+	font-size: 1.25em;
+	background-color: #999;
+	opacity: .8;
+	list-style-type: none;
+	text-align: center;
+	position: fixed;	
+}
+
+.signout_link:hover {
+	left: .15em;
+}
