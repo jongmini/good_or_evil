@@ -1,28 +1,12 @@
-== README
+== Good or Evil
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Good or Evil is an annonymous posting blog where users can post, comment and rate annonymously. A user can see how other uses view his/her posts as well as how he/she votes other posts. The concept for this group project was inspired by a growing interest on the web for a space where social interactions can take place anonymously, such as secret sharing sites. We wanted to take that idea further and create a space where a discussion around whether a post is good or evil can happen anonymously. 
 
-Things you may want to cover:
+Design process:
+Coding as a group had its own set of challenges as the team members had different set of skills and interests. However, we had a specific vision and a goal in mind and met together throughout the day to discuss what we want to tackle together as well as how to “divide and conqueror” the project. We divided the group to handle the back-end and front-end separately. I was in-charge of the back-end portion of the project and the front-end user interactivity. 
 
-* Ruby version
+Anything interesting about the project:
+This group project was an opportunity to learn about collaborative programming experience. We learned how to program collaboratively using the Github version controlling system and learned how to work through code conflicts and merges. It was a great way to understand what a real programming environment is like where many developers will work on the same project collaboratively. 
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+Technology
+This application is built using the Amazon S3, Carrierwave, CanvasJS, Ruby on Rails, JavaScript, jQuery, AJAX 
